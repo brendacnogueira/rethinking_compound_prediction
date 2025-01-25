@@ -1,4 +1,3 @@
-# rethinking_compound_prediction
 # Rethinking Evaluation in Compound Potency Prediction
 
 --------------------- MACHINE and DEEP LEARNING SCRIPTS: GENERAL INFORMATION ---------------------
