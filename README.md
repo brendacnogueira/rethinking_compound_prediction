@@ -103,9 +103,7 @@ Requirements:
 - IRonPy==0.3.88
 - xgboost==2.0.3
 - skorch==0.15.0
-- dgl (?)
-- pydantic (?)
-- dgllife (?)
+
 
 
 
