@@ -1,6 +1,6 @@
-# Machine learning for compound potency prediction
+#Rethinking Compound Potency Prediction
 
---------------------- MACHINE and DEEP LEARNING SCRIPTS: GENERAL INFORMATION ---------------------
+--------------------- SCRIPTS: GENERAL INFORMATION ---------------------
 
 This folder contains scripts to build and analyse ML models. 
 
