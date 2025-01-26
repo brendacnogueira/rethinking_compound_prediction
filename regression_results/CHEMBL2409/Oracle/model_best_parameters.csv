@@ -1,0 +1,31 @@
+,Unnamed: 0,model,trial,Target ID,Selection Metric,nb_epoch,learning_rate,n_tasks,graph_conv_layers,dense_layer_size,dropout,mode,number_atom_features,loss_func,module__layers,module__dropout_rate,module__activation,optimizer__lr,max_epochs,on_epoch,train_loss,val_loss,max_depth,n_estimators,C,kernel,n_neighbors,strategy
+0,0,GCN,0,CHEMBL2409,Oracle,100.0,0.001,1.0,"[512, 512]",512.0,0.0,regression,30.0,<deepchem.models.losses.L2Loss object at 0x14afa033ad60>,,,,,,,,,,,,,,
+1,1,GCN,1,CHEMBL2409,Oracle,200.0,0.01,1.0,"[512, 512]",64.0,0.0,regression,30.0,<deepchem.models.losses.L2Loss object at 0x149a68182be0>,,,,,,,,,,,,,,
+2,2,GCN,2,CHEMBL2409,Oracle,100.0,0.001,1.0,"[256, 256]",64.0,0.0,regression,30.0,<deepchem.models.losses.L2Loss object at 0x14af48cd1f70>,,,,,,,,,,,,,,
+3,3,GCN,3,CHEMBL2409,Oracle,200.0,0.001,1.0,"[256, 256]",64.0,0.0,regression,30.0,<deepchem.models.losses.L2Loss object at 0x149a80058c70>,,,,,,,,,,,,,,
+4,4,GCN,4,CHEMBL2409,Oracle,200.0,0.001,1.0,"[256, 256]",512.0,0.0,regression,30.0,<deepchem.models.losses.L2Loss object at 0x149b2fa399d0>,,,,,,,,,,,,,,
+5,5,DNN,0,CHEMBL2409,Oracle,,,,,,,,,,"(100, 250, 500)",0.0,tanh,0.01,200.0,140.0,0.0229054797521751,0.6257794407614743,,,,,,
+6,6,DNN,1,CHEMBL2409,Oracle,,,,,,,,,,"(500, 250)",0.0,tanh,0.01,200.0,53.0,0.1849349708012912,0.5774693696342521,,,,,,
+7,7,DNN,2,CHEMBL2409,Oracle,,,,,,,,,,"(100, 100)",0.0,tanh,0.01,200.0,152.0,0.0076246600719573,0.604149182275315,,,,,,
+8,8,DNN,3,CHEMBL2409,Oracle,,,,,,,,,,"(100, 250, 500)",0.0,tanh,0.001,200.0,7.0,0.3471957645986391,0.6678597836731762,,,,,,
+9,9,DNN,4,CHEMBL2409,Oracle,,,,,,,,,,"(500, 250)",0.0,tanh,0.01,200.0,79.0,0.1557403568016446,0.5891388723362109,,,,,,
+10,10,XGBoost,0,CHEMBL2409,Oracle,,0.1,,,,,,,,,,,,,,,,5.0,250.0,,,,
+11,11,XGBoost,1,CHEMBL2409,Oracle,,0.1,,,,,,,,,,,,,,,,5.0,250.0,,,,
+12,12,XGBoost,2,CHEMBL2409,Oracle,,0.1,,,,,,,,,,,,,,,,5.0,250.0,,,,
+13,13,XGBoost,3,CHEMBL2409,Oracle,,0.1,,,,,,,,,,,,,,,,5.0,250.0,,,,
+14,14,XGBoost,4,CHEMBL2409,Oracle,,0.1,,,,,,,,,,,,,,,,5.0,250.0,,,,
+15,15,SVR,0,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,10.0,<function tanimoto_from_sparse at 0x14b0da2c4ee0>,,
+16,16,SVR,1,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,10.0,<function tanimoto_from_sparse at 0x14b0da2c4ee0>,,
+17,17,SVR,2,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,10000.0,<function tanimoto_from_sparse at 0x14b0da2c4ee0>,,
+18,18,SVR,3,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,10000.0,<function tanimoto_from_sparse at 0x14b0da2c4ee0>,,
+19,19,SVR,4,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,10.0,<function tanimoto_from_sparse at 0x14b0da2c4ee0>,,
+20,20,kNN,0,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,5.0,
+21,21,kNN,1,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,5.0,
+22,22,kNN,2,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,5.0,
+23,23,kNN,3,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,5.0,
+24,24,kNN,4,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,5.0,
+25,25,MR,0,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,,median
+26,26,MR,1,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,,median
+27,27,MR,2,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,,median
+28,28,MR,3,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,,median
+29,29,MR,4,CHEMBL2409,Oracle,,,,,,,,,,,,,,,,,,,,,,,median

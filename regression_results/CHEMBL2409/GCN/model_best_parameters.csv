@@ -1,0 +1,16 @@
+,Unnamed: 0,model,trial,Target ID,SelectionMetric,nb_epoch,learning_rate,n_tasks,graph_conv_layers,dense_layer_size,dropout,mode,number_atom_features,loss_func
+15,15,GCN,0,CHEMBL2409,SERA,100,0.001,1,"[256, 256]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b0c56bfa60>
+16,16,GCN,1,CHEMBL2409,SERA,100,0.001,1,"[256, 256]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b0b02b7430>
+17,17,GCN,2,CHEMBL2409,SERA,100,0.01,1,"[512, 512]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b050e23100>
+18,18,GCN,3,CHEMBL2409,SERA,200,0.01,1,"[64, 64]",256,0.0,regression,30,<__main__.SeraLoss object at 0x14b050e7a790>
+19,19,GCN,4,CHEMBL2409,SERA,200,0.01,1,"[64, 64]",256,0.0,regression,30,<__main__.SeraLoss object at 0x14b0b027bc40>
+20,20,GCN,0,CHEMBL2409,MSE,100,0.001,1,"[512, 512]",512,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e38e50>
+21,21,GCN,1,CHEMBL2409,MSE,100,0.001,1,"[64, 64]",512,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e4f340>
+22,22,GCN,2,CHEMBL2409,MSE,100,0.001,1,"[256, 256]",512,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b1dd70e1f0>
+23,23,GCN,3,CHEMBL2409,MSE,100,0.001,1,"[512, 512]",64,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e7a520>
+24,24,GCN,4,CHEMBL2409,MSE,100,0.001,1,"[64, 64]",64,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b0c56e90a0>
+25,25,GCN,0,CHEMBL2409,MAE,100,0.01,1,"[64, 64]",1024,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b1dd70e250>
+26,26,GCN,1,CHEMBL2409,MAE,100,0.001,1,"[64, 64]",1024,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b04dbf8970>
+27,27,GCN,2,CHEMBL2409,MAE,200,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b050e3deb0>
+28,28,GCN,3,CHEMBL2409,MAE,200,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b050e7a580>
+29,29,GCN,4,CHEMBL2409,MAE,200,0.001,1,"[256, 256]",512,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b1964b0700>

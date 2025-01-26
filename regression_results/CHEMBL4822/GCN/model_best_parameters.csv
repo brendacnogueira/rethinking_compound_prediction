@@ -1,0 +1,16 @@
+,Unnamed: 0,model,trial,Target ID,SelectionMetric,nb_epoch,learning_rate,n_tasks,graph_conv_layers,dense_layer_size,dropout,mode,number_atom_features,loss_func
+15,15,GCN,0,CHEMBL4822,SERA,100,0.001,1,"[512, 512]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b050e3b700>
+16,16,GCN,1,CHEMBL4822,SERA,200,0.001,1,"[256, 256]",64,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dbcf400>
+17,17,GCN,2,CHEMBL4822,SERA,100,0.001,1,"[512, 512]",64,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dcac880>
+18,18,GCN,3,CHEMBL4822,SERA,200,0.001,1,"[512, 512]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b0c5616ac0>
+19,19,GCN,4,CHEMBL4822,SERA,200,0.001,1,"[512, 512]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b0c5696670>
+20,20,GCN,0,CHEMBL4822,MSE,200,0.001,1,"[64, 64]",256,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b0b03190a0>
+21,21,GCN,1,CHEMBL4822,MSE,200,0.001,1,"[64, 64]",1024,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e7d640>
+22,22,GCN,2,CHEMBL4822,MSE,100,0.01,1,"[1024, 1024]",64,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b04dc54fa0>
+23,23,GCN,3,CHEMBL4822,MSE,200,0.001,1,"[512, 512]",256,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b04dbd8b80>
+24,24,GCN,4,CHEMBL4822,MSE,100,0.001,1,"[512, 512]",512,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b04db122b0>
+25,25,GCN,0,CHEMBL4822,MAE,200,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0c51440d0>
+26,26,GCN,1,CHEMBL4822,MAE,100,0.001,1,"[256, 256]",64,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b050e829d0>
+27,27,GCN,2,CHEMBL4822,MAE,200,0.001,1,"[512, 512]",1024,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b050e7d820>
+28,28,GCN,3,CHEMBL4822,MAE,200,0.001,1,"[1024, 1024]",64,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0b03a3430>
+29,29,GCN,4,CHEMBL4822,MAE,100,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b050dec610>
