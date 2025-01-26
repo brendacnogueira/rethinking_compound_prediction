@@ -314,9 +314,6 @@ for target in regression_tids:
             predictions_test = model_eval_test.predictions
             predictions_test["trial"] = trial
             predictions_test_df = pd.concat([predictions_test_df, predictions_test])
-
-    
-    weight_resume.to_csv(os.path.join(result_path, f'weights.csv'))
             
     parameter_df = pd.DataFrame(parameter_resume)
     performance_train_df.to_csv(os.path.join(result_path, f'performance_train.csv'))
