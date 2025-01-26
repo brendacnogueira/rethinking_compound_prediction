@@ -1,0 +1,16 @@
+,Unnamed: 0,model,trial,Target ID,SelectionMetric,nb_epoch,learning_rate,n_tasks,graph_conv_layers,dense_layer_size,dropout,mode,number_atom_features,loss_func
+15,15,GCN,0,CHEMBL230,SERA,200,0.001,1,"[256, 256]",256,0.0,regression,30,<__main__.SeraLoss object at 0x14b050e23130>
+16,16,GCN,1,CHEMBL230,SERA,100,0.001,1,"[512, 512]",1024,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dc089d0>
+17,17,GCN,2,CHEMBL230,SERA,100,0.001,1,"[256, 256]",256,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dc08b50>
+18,18,GCN,3,CHEMBL230,SERA,100,0.01,1,"[256, 256]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b0c56bb700>
+19,19,GCN,4,CHEMBL230,SERA,100,0.001,1,"[512, 512]",1024,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dcb48e0>
+20,20,GCN,0,CHEMBL230,MSE,200,0.001,1,"[256, 256]",512,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b0b0319250>
+21,21,GCN,1,CHEMBL230,MSE,100,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b04db126d0>
+22,22,GCN,2,CHEMBL230,MSE,100,0.001,1,"[256, 256]",64,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e3bf40>
+23,23,GCN,3,CHEMBL230,MSE,200,0.001,1,"[256, 256]",1024,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b04dbb33d0>
+24,24,GCN,4,CHEMBL230,MSE,200,0.001,1,"[256, 256]",1024,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b0b02b7ca0>
+25,25,GCN,0,CHEMBL230,MAE,100,0.001,1,"[256, 256]",512,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0b02b7550>
+26,26,GCN,1,CHEMBL230,MAE,100,0.001,1,"[1024, 1024]",64,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0c566e8e0>
+27,27,GCN,2,CHEMBL230,MAE,200,0.001,1,"[64, 64]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b04db91280>
+28,28,GCN,3,CHEMBL230,MAE,100,0.001,1,"[256, 256]",512,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b19b2c2f70>
+29,29,GCN,4,CHEMBL230,MAE,100,0.001,1,"[256, 256]",64,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0b022b5e0>

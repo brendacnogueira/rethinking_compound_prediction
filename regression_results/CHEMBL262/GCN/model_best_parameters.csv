@@ -1,0 +1,16 @@
+,Unnamed: 0,model,trial,Target ID,SelectionMetric,nb_epoch,learning_rate,n_tasks,graph_conv_layers,dense_layer_size,dropout,mode,number_atom_features,loss_func
+15,15,GCN,0,CHEMBL262,SERA,100,0.001,1,"[256, 256]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dc5a5e0>
+16,16,GCN,1,CHEMBL262,SERA,200,0.001,1,"[64, 64]",512,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dc46700>
+17,17,GCN,2,CHEMBL262,SERA,100,0.001,1,"[256, 256]",256,0.0,regression,30,<__main__.SeraLoss object at 0x14b050e4fe20>
+18,18,GCN,3,CHEMBL262,SERA,100,0.001,1,"[64, 64]",256,0.0,regression,30,<__main__.SeraLoss object at 0x14b050e7d640>
+19,19,GCN,4,CHEMBL262,SERA,200,0.001,1,"[64, 64]",1024,0.0,regression,30,<__main__.SeraLoss object at 0x14b04dc0f490>
+20,20,GCN,0,CHEMBL262,MSE,200,0.001,1,"[64, 64]",1024,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b04dc0feb0>
+21,21,GCN,1,CHEMBL262,MSE,200,0.001,1,"[64, 64]",512,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b0b028e0d0>
+22,22,GCN,2,CHEMBL262,MSE,200,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b0b028eee0>
+23,23,GCN,3,CHEMBL262,MSE,200,0.001,1,"[64, 64]",64,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e3d730>
+24,24,GCN,4,CHEMBL262,MSE,100,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L2Loss object at 0x14b050e2bfd0>
+25,25,GCN,0,CHEMBL262,MAE,100,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b1dd70e070>
+26,26,GCN,1,CHEMBL262,MAE,100,0.001,1,"[64, 64]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0b0319d00>
+27,27,GCN,2,CHEMBL262,MAE,200,0.001,1,"[256, 256]",512,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0c5149100>
+28,28,GCN,3,CHEMBL262,MAE,200,0.001,1,"[256, 256]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0b027bbb0>
+29,29,GCN,4,CHEMBL262,MAE,200,0.001,1,"[512, 512]",256,0.0,regression,30,<deepchem.models.losses.L1Loss object at 0x14b0b027bee0>
