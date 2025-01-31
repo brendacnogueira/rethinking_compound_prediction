@@ -277,10 +277,8 @@ class MLModel:
             elif self.ml_algorithm == "RFR":
                 model = RandomForestRegressor(random_state=self.seed)
             elif self.ml_algorithm == "kNN":
-                if self.weights is None:
-                    model = neighbors.KNeighborsRegressor()
-                else:
-                    model = WeightedKNNRegressor()
+               
+                model = WeightedKNNRegressor()
             elif self.ml_algorithm=="XGBoost":
                 loss_xgboost={"MAE":"reg:absoluteerror","SERA":sera_loss(self.ph),"MSE":"reg:squarederror"}
                 loss=loss_xgboost[self.metric]
