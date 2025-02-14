@@ -13,7 +13,7 @@ import random
 #Sklearn
 from sklearn.model_selection import KFold 
 import statistics as stats
-
+import pickle
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
@@ -34,7 +34,7 @@ selection_metric: metric to loss function and hyperparameter optimization (MAE: 
 
 # %%
 
-model_list = ['SVR','kNN','XGBoost','DNN']
+model_list = ['DNN','SVR','kNN','XGBoost']
 cv_folds=5
 
 selection_metric =["MAE","MSE","SERA"]
@@ -113,15 +113,12 @@ for target in regression_tids:
             for sel_metric in selection_metric:
                 print(f'Training {model}-{sel_metric}')
                 # Save ML models
-                #model_fpath = create_directory(f"./regression_results/trained_models/{model}_{opt}/", verbose=False)
+                model_fpath = create_directory(f"./trained_models/{target}/{model}_{sel_metric}/", verbose=False)
                 
                
                 ph={"method":"range","npts": 3,"control_pts":[0,0,0,8,0.1,0,9,1,0]}
 
-                #if model == 'DNN' and sel_metric!="SERA":
-                #    ml_model = DNN(training_set, model, training_set.features.shape[1], seed=trial, metric=sel_metric)
-                #    #model_fpath += ".h5"
-                #    #ml_model.model.save(model_fpath)
+                
                 if model == 'DNN': #and sel_metric=="SERA"
                     ml_model = DNN(training_set, model, training_set.features.shape[1], seed=trial,  ph=ph, metric=sel_metric)
                     #model_fpath += "model.pth"

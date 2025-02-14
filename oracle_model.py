@@ -19,7 +19,7 @@ import tensorflow as tf
 import deepchem as dc
 from deepchem.models.torch_models import GCNModel
 from deepchem.models.losses import  L1Loss,L2Loss, Loss, _make_pytorch_shapes_consistent, _make_tf_shapes_consistent, _ensure_float
-
+import pickle
 from descriptors import CalcMolDescriptors
 warnings.filterwarnings('ignore')
 tf.get_logger().setLevel('ERROR')
@@ -113,11 +113,14 @@ for target in regression_tids:
     features=features.to_numpy()
     dataset_oracle = Dataset(features, np.array(regression_db_tid.pPot.values))
 
-   
+    
 
     for model in model_list: 
+
         print(model)
         sel_metric="AFO"
+
+        model_fpath = create_directory(f"./trained_models/{model}_{sel_metric}/", verbose=False)
         # Final Dataframes
 
         # Constructing ChEMBL Dataset
@@ -152,8 +155,8 @@ for target in regression_tids:
             
             # set seed
             set_global_determinism(seed=trial)
-                # Save ML models
-                #model_fpath = create_directory(f"./regression_results/trained_models/{model}_{opt}/", verbose=False)
+            # Save ML models
+            model_fpath = create_directory(f"./trained_models/{target}/{model}_{sel_metric}/", verbose=False)
             
             ph={"method":"range","npts": 3,"control_pts":[0,0,0,8,0.1,0,9,1,0]}
 
@@ -171,9 +174,6 @@ for target in regression_tids:
 
            # continue
 
-            for param, value in best_params.items():
-                    opt_parameters_dict[param] = value
-            parameter_resume.append(opt_parameters_dict)
             
 
 
@@ -267,6 +267,7 @@ for target in regression_tids:
                 parameter_resume.append(opt_parameters_dict)
                 
                 ml_model = final_gcn(training_set, best_params)
+               # gcn_path=model_fpath+"graphconv_model.pth"
 
                 model_eval_train = Model_Evaluation(ml_model, training_set, train_idx, sel_metric, smiles_train,
                                                         training_set_u.y, transformers[0], model_id=model)
@@ -282,6 +283,8 @@ for target in regression_tids:
 
                 if  model == "DNN":
                     ml_model = DNN(training_set, model, training_set.features.shape[1], seed=trial,  ph=ph, metric="WMSE", weights=weights)
+                    #model_fpath += "model.pth"
+                    #torch.save(ml_model.model,model_fpath)
 
                 else:
                     ml_model = MLModel(training_set, model, metric="MSE",ph=ph,weights=weights)
@@ -314,6 +317,9 @@ for target in regression_tids:
             predictions_test = model_eval_test.predictions
             predictions_test["trial"] = trial
             predictions_test_df = pd.concat([predictions_test_df, predictions_test])
+
+    
+   # weight_resume.to_csv(os.path.join(result_path, f'weights.csv'))
             
     parameter_df = pd.DataFrame(parameter_resume)
     performance_train_df.to_csv(os.path.join(result_path, f'performance_train.csv'))

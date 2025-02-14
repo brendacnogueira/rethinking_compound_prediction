@@ -235,7 +235,8 @@ for target in regression_tids:
 
                     # Generate final Model
                     ml_model = final_gcn(training_set, best_params)
-
+                    
+                    #model_fpath = create_directory(f"./trained_models/{target}/{model}_{sel_metric}/graphconv_model.pth", verbose=False)
                     # evaluate the model
                     train_score = ml_model.evaluate(training_set, [metric], transformers)
                     test_score = ml_model.evaluate(test_set, [metric], transformers)
@@ -248,7 +249,6 @@ for target in regression_tids:
                     #Performance df
                     performance_train = model_eval_train.pred_performance
                     performance_train["trial"] = trial
-                    performance_train["Y"] = Y
                     performance_train_df = pd.concat([performance_train_df, performance_train])
 
                     # Prediction df
