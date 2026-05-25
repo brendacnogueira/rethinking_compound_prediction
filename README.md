@@ -274,20 +274,7 @@ Generated figures are saved to:
 results_plots/
 ```
 
----
 
-# Citation
-
-If you use this repository in your research, please cite the associated publication.
-
-```bibtex
-@article{yourcitation,
-  title={Rethinking Compound Potency Prediction},
-  author={Author Names},
-  journal={Journal Name},
-  year={2026}
-}
-```
 
 ---
 
