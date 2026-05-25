@@ -12,36 +12,32 @@ Python scripts (.py):
 
 (1) ml_models: script with machine and deep learning models (MR, kNN, SVR, XGBoost, DNN), with diferents metric (MAE,MSE,SERA),  able to predict compound potency.
 
-(2) gcn_models: script with graph neural networks models (GCN), with diferents metric (MAE,MSE,SERA), to predict compound potency.
+(2) oracle_model: script with machine, deep learning models  and graph neural networks models (MR, kNN, SVR, XGBoost, DNN, GCN), with Autofocused Oracle (AFO), able to predict compound potency.
 
-(3) oracle_model: script with machine, deep learning models  and graph neural networks models (MR, kNN, SVR, XGBoost, DNN, GCN), with Autofocused Oracle (AFO), able to predict compound potency.
+(3) ml_utils: script that provide supporting functions for ML/DL models generation
 
-(4) ml_utils: script that provide supporting functions for ML/DL models generation
+(4) fingerprint: script to calculate molecular fingerprints (Morgan fingerprints)
 
-(5) fingerprint: script to calculate molecular fingerprints (Morgan fingerprints)
+(5) machine_learning_models: script to build ML/DL models for regression (MR, kNN, SVR, XGBoost, DNN)
 
-(6) machine_learning_models: script to build ML/DL models for regression (MR, kNN, SVR, XGBoost, DNN)
+(6) sera_opt_proto: script providing SERA functions for evaluations and loss for torch.
 
-(7) sera_opt_proto: script providing SERA functions for evaluations and loss for torch.
+(7) xgboost_sera: script to calculate derivatives of the SERA loss function for XGBoost.
 
-(8) xgboost_sera: script to calculate derivatives of the SERA loss function for XGBoost.
+(8) descriptors: script to calculate molecular descriptiors.
 
-(9) gcn: scrip that replaces the standard file from deepchem library for GCN predictions with L1Loss, L2Loss, and SERA loss (see below). 
+(9) oracle: script to build deep leraning models for autofocused oracle.
 
-(10) descriptors: script to calculate molecular descriptiors.
-
-(11) oracle: script to build deep leraning models for autofocused oracle.
-
-(12) mbo: script to model-based optimization (MBO) and Covariance Matrix Adaptation Evolution Strategy (CMA-ES) for AFO. 
+(10) mbo: script to model-based optimization (MBO) and Covariance Matrix Adaptation Evolution Strategy (CMA-ES) for AFO. 
 
 
 Jupyter Notebooks (.ipynb):
 
-(13) data_analysis_figures: Jupyter notebook with a workflow for the data analysis of compound potency 
+(11) data_analysis_figures: Jupyter notebook with a workflow for the data analysis of compound potency 
 predictions from regression models.
 
 
-(14) Folders:
+(12) Folders:
 	
 	- dataset: stores the compound potency dataset used in this analysis
 
@@ -52,7 +48,7 @@ predictions from regression models.
 	- results_plots: stores plots generated in data_analysis_figures.ipynb.
 
 
-(15) Python environment:
+(13) Python environment:
 
 	- conda_env_ml.yml provides the python environment used for this analysis. (Requires instalation see below)
 
