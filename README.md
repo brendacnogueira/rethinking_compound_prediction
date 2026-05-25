@@ -1,108 +1,320 @@
-#Rethinking Compound Potency Prediction
+# Rethinking Compound Potency Prediction
 
---------------------- SCRIPTS: GENERAL INFORMATION ---------------------
+A framework for machine learning, deep learning, and graph neural network models for **compound potency prediction**, including methods for **imbalanced regression**, **Autofocused Oracle (AFO)** optimization, and **model-based optimization (MBO)** workflows.
 
-This folder contains scripts to build and analyse ML models. 
+---
 
-Should be downloaded and all scripts can be used inside the folder.
+# Overview
 
-The content of the folders is summarized in the following.
+This repository contains scripts and notebooks for:
 
-Python scripts (.py):
+- Compound potency prediction
+- Imbalanced regression analysis
+- Molecular representation learning
+- SERA-based optimization and evaluation
+- Autofocused Oracle (AFO) workflows
+- Model-based optimization using CMA-ES
 
-(1) ml_models: script with machine and deep learning models (MR, kNN, SVR, XGBoost, DNN), with diferents metric (MAE,MSE,SERA),  able to predict compound potency.
+The framework supports both traditional machine learning and deep learning approaches for molecular property prediction.
 
-(2) oracle_model: script with machine, deep learning models  and graph neural networks models (MR, kNN, SVR, XGBoost, DNN, GCN), with Autofocused Oracle (AFO), able to predict compound potency.
+---
 
-(3) ml_utils: script that provide supporting functions for ML/DL models generation
+# Repository Structure
 
-(4) fingerprint: script to calculate molecular fingerprints (Morgan fingerprints)
+```text
+.
+├── dataset/
+├── ccr_results/
+├── regression_results/
+├── results_plots/
+├── ml_models.py
+├── oracle_model.py
+├── ml_utils.py
+├── fingerprint.py
+├── machine_learning_models.py
+├── sera_opt_proto.py
+├── xgboost_sera.py
+├── descriptors.py
+├── oracle.py
+├── mbo.py
+├── data_analysis_figures.ipynb
+├── conda_env_ml.yml
+├── README.md
+└── LICENSE
+```
 
-(5) machine_learning_models: script to build ML/DL models for regression (MR, kNN, SVR, XGBoost, DNN)
+---
 
-(6) sera_opt_proto: script providing SERA functions for evaluations and loss for torch.
+# Scripts
 
-(7) xgboost_sera: script to calculate derivatives of the SERA loss function for XGBoost.
+## Python Scripts
 
-(8) descriptors: script to calculate molecular descriptiors.
+### `ml_models.py`
 
-(9) oracle: script to build deep leraning models for autofocused oracle.
+Implements machine learning and deep learning regression models for compound potency prediction.
 
-(10) mbo: script to model-based optimization (MBO) and Covariance Matrix Adaptation Evolution Strategy (CMA-ES) for AFO. 
+Supported models:
+- Multiple Regression (MR)
+- k-Nearest Neighbors (kNN)
+- Support Vector Regression (SVR)
+- XGBoost
+- Deep Neural Networks (DNN)
 
+Supported losses/metrics:
+- MAE
+- MSE
+- SERA
 
-Jupyter Notebooks (.ipynb):
+---
 
-(11) data_analysis_figures: Jupyter notebook with a workflow for the data analysis of compound potency 
-predictions from regression models.
+### `oracle_model.py`
 
+Implements machine learning, deep learning, and graph neural network models integrated with the Autofocused Oracle (AFO).
 
-(12) Folders:
-	
-	- dataset: stores the compound potency dataset used in this analysis
+Supported models:
+- MR
+- kNN
+- SVR
+- XGBoost
+- DNN
+---
 
-	- ccr_results : stores the CCR algorithm results
+### `ml_utils.py`
 
-	- regression_results: stores regression models predictions
+Utility functions supporting:
+- Model training
+- Evaluation
+- Data preprocessing
+- Experiment handling
 
-	- results_plots: stores plots generated in data_analysis_figures.ipynb.
+---
 
+### `fingerprint.py`
 
-(13) Python environment:
+Computes molecular fingerprints using:
+- Morgan fingerprints
 
-	- conda_env_ml.yml provides the python environment used for this analysis. (Requires instalation see below)
+---
 
+### `machine_learning_models.py`
 
-Order of execution:
+Core implementation of ML/DL regression models.
 
-1. (1), (2), (3) to generate the model predictions (results). 
+---
 
-2. (13) to generate the figures. 
+### `sera_opt_proto.py`
 
+Implements:
+- SERA evaluation metric
+- SERA loss functions for PyTorch
 
+---
 
-Python environment installation:
+### `xgboost_sera.py`
 
-1. Open Anaconda command line
+Provides SERA derivative calculations for integration with XGBoost optimization.
 
-2. Type 'conda env create -n ENVNAME --file ENV.yml', where 'ENVNAME' is the desired environment and 'ENV' the full path to the yml file.
+---
 
+### `descriptors.py`
 
-Python environment export:
+Computes molecular descriptors.
 
-1. Open Anaconda command line
+---
 
-2. Type 'conda env export ENVNAME>ENV.yml', where 'ENVNAME' is the desired environment and 'ENV' the full path to the yml file.
+### `oracle.py`
 
-Changes required:
+Implements deep learning models for the Autofocused Oracle framework.
 
-- Change file gcn.py in the deepchem library on the path: ENVNAME/lib/python3.9/site-packages/deepchem/models/torch_models/gcn.py
+---
 
-Modules:
-- cudnn==8.0.4
-- cuda==11.6
+### `mbo.py`
 
-Requirements:
+Implements:
+- Model-Based Optimization (MBO)
 
-- python=3.9.18
-- scipy=1.8.1
-- numpy=1.22.4
-- scikit-learn==1.1.1
-- tensorflow==2.9.1
-- keras==2.9.0
-- rdkit==2022.3.3
-- cudatoolkit=11.2.2
-- dgl-cuda11.1=0.8.1
-- deepchem==2.6.1
-- tqdm=4.64.0
-- torch=2.2.0
-- IRonPy==0.3.88
-- xgboost==2.0.3
-- skorch==0.15.0
+---
 
+# Jupyter Notebook
 
+### `data_analysis_figures.ipynb`
 
+Provides a complete workflow for:
+- Regression result analysis
+- Compound potency prediction evaluation
+- Figure generation
+- Statistical analysis
 
+Generated figures are stored in:
 
+```text
+results_plots/
+```
 
+---
 
+# Data and Results Folders
+
+| Folder | Description |
+|---|---|
+| `dataset/` | Compound potency datasets |
+| `ccr_results/` | CCR algorithm outputs |
+| `regression_results/` | Model prediction outputs |
+| `results_plots/` | Generated analysis figures |
+
+---
+
+# Installation
+
+## Create the Conda Environment
+
+Open an Anaconda terminal and run:
+
+```bash
+conda env create -n ENVNAME --file conda_env_ml.yml
+```
+
+Replace:
+- `ENVNAME` with your preferred environment name
+
+---
+
+## Activate the Environment
+
+```bash
+conda activate ENVNAME
+```
+
+---
+
+# Environment Export
+
+To export the environment:
+
+```bash
+conda env export -n ENVNAME > ENV.yml
+```
+
+---
+
+# Required Modifications
+
+The following file in DeepChem must be modified:
+
+```text
+ENVNAME/lib/python3.9/site-packages/deepchem/models/torch_models/gcn.py
+```
+
+---
+
+# CUDA Requirements
+
+Required CUDA modules:
+
+```text
+cudnn == 8.0.4
+cuda  == 11.6
+```
+
+---
+
+# Package Requirements
+
+```text
+python=3.9.18
+scipy=1.8.1
+numpy=1.22.4
+scikit-learn=1.1.1
+tensorflow=2.9.1
+keras=2.9.0
+rdkit=2022.3.3
+cudatoolkit=11.2.2
+dgl-cuda11.1=0.8.1
+deepchem=2.6.1
+tqdm=4.64.0
+torch=2.2.0
+IRonPy=0.3.88
+xgboost=2.0.3
+skorch=0.15.0
+```
+
+---
+
+# Execution Workflow
+
+## Step 1 — Generate Model Predictions
+
+Run:
+
+```text
+ml_models.py
+oracle_model.py
+ml_utils.py
+```
+
+These scripts generate prediction results stored in:
+
+```text
+regression_results/
+```
+
+---
+
+## Step 2 — Generate Analysis Figures
+
+Run:
+
+```text
+data_analysis_figures.ipynb
+```
+
+Generated figures are saved to:
+
+```text
+results_plots/
+```
+
+---
+
+# Citation
+
+If you use this repository in your research, please cite the associated publication.
+
+```bibtex
+@article{yourcitation,
+  title={Rethinking Compound Potency Prediction},
+  author={Author Names},
+  journal={Journal Name},
+  year={2026}
+}
+```
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+```text
+MIT License
+
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
